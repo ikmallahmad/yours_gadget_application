@@ -131,9 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.all(10),
             childAspectRatio: 1.0,
             children: [
-              CategoryCard('IPHONE', 'images/iphone16.png', 'iphone'),
+              CategoryCard('IPHONE', 'images/iphonexr.png', 'iphone'),
               CategoryCard('ANDROID', 'images/redminote13pro.png', 'android'),
-              CategoryCard('SET PC', 'images/setpc.png', 'set_pc'),
+              CategoryCard('SET PC', 'images/custompc.png', 'set_pc'),
               CategoryCard('LAPTOP', 'images/acernitrov15.png', 'laptop'),
             ],
           ),

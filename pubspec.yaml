@@ -82,6 +82,26 @@ flutter:
   - images/default_icon.png
   - images/duitnow.png
   - images/bankicon.png
+  - images/iphone13mini.png
+  - images/iphone12pro.png
+  - images/iphonese2022.png
+  - images/iphonexr.png
+  - images/pixel6.png
+  - images/oneplus9pro.png
+  - images/xiaomi11.png
+  - images/oppofindx3pro.png
+  - images/custompc.png
+  - images/desktoppc.png
+  - images/officepc.png
+  - images/pcstreaming.png
+  - images/highendgamingpc.png
+  - images/macbookairm1.png
+  - images/hpspectrex360.png
+  - images/lenovothinkpadx1.png
+  - images/dellxps13.png
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

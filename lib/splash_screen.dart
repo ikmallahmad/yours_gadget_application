@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yours_gadget_latest/views/signup_screen.dart';
-import 'views/homepage.dart'; // Import the HomePage screen
+//import 'views/homepage.dart'; // Import the HomePage screen
 
 class SplashScreen extends StatefulWidget {
   @override

@@ -26,30 +26,86 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
       {
         'name': 'iPhone 16',
         'image': 'images/iphone16.png',
-        'price': 4999.99,
+        'price': 6499.00, // Approx MYR Price
         'variants': ['Black', 'White', 'Pink'],
         'storage': ['128GB', '256GB', '512GB']
       },
       {
         'name': 'iPhone 14 Pro',
         'image': 'images/iphone14problack.png',
-        'price': 3899.99,
+        'price': 5899.00, // Approx MYR Price
         'variants': ['Black', 'White', 'Gold'],
         'storage': ['128GB', '256GB']
+      },
+      {
+        'name': 'iPhone 13 Mini',
+        'image': 'images/iphone13mini.png',
+        'price': 4399.00, // Approx MYR Price
+        'variants': ['Black', 'Blue', 'Red'],
+        'storage': ['128GB', '256GB']
+      },
+      {
+        'name': 'iPhone SE (2022)',
+        'image': 'images/iphonese2022.png',
+        'price': 2499.00, // Approx MYR Price
+        'variants': ['Black', 'White', 'Red'],
+        'storage': ['64GB', '128GB']
+      },
+      {
+        'name': 'iPhone 12 Pro',
+        'image': 'images/iphone12pro.png',
+        'price': 4999.00, // Approx MYR Price
+        'variants': ['Black', 'Silver', 'Graphite'],
+        'storage': ['128GB', '256GB']
+      },
+      {
+        'name': 'iPhone XR',
+        'image': 'images/iphonexr.png',
+        'price': 3299.00, // Approx MYR Price
+        'variants': ['Black', 'White', 'Blue'],
+        'storage': ['64GB', '128GB']
       },
     ],
     'android': [
       {
         'name': 'Redmi Note 13 Pro',
         'image': 'images/redminote13pro.png',
-        'price': 2599.99,
+        'price': 1399.00, // Approx MYR Price
         'variants': ['Black', 'Silver'],
         'storage': ['128GB', '256GB']
       },
       {
         'name': 'Samsung Galaxy Fold 6',
         'image': 'images/samsungfoldsilver.png',
-        'price': 2799.99,
+        'price': 8999.00, // Approx MYR Price
+        'variants': ['Black', 'Silver'],
+        'storage': ['256GB', '512GB']
+      },
+      {
+        'name': 'Google Pixel 6',
+        'image': 'images/pixel6.png',
+        'price': 2799.00, // Approx MYR Price
+        'variants': ['Black', 'Green', 'White'],
+        'storage': ['128GB', '256GB']
+      },
+      {
+        'name': 'OnePlus 9 Pro',
+        'image': 'images/oneplus9pro.png',
+        'price': 4999.00, // Approx MYR Price
+        'variants': ['Black', 'Silver'],
+        'storage': ['128GB', '256GB']
+      },
+      {
+        'name': 'Xiaomi Mi 11',
+        'image': 'images/xiaomi11.png',
+        'price': 2499.00, // Approx MYR Price
+        'variants': ['Blue', 'Black'],
+        'storage': ['128GB', '256GB']
+      },
+      {
+        'name': 'Oppo Find X3 Pro',
+        'image': 'images/oppofindx3pro.png',
+        'price': 4999.00, // Approx MYR Price
         'variants': ['Black', 'Silver'],
         'storage': ['256GB', '512GB']
       },
@@ -58,7 +114,28 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
       {
         'name': 'Gaming PC',
         'image': 'images/setpc.png',
-        'price': 2299.99,
+        'price': 3000.00, // Default price for basic gaming PC
+        'variants': [],
+        'storage': []
+      },
+      {
+        'name': 'Custom PC Build',
+        'image': 'images/custompc.png',
+        'price': 3500.00, // Starting price for custom build
+        'variants': [],
+        'storage': []
+      },
+      {
+        'name': 'Desktop PC',
+        'image': 'images/desktoppc.png',
+        'price': 2500.00, // Default price for office PC
+        'variants': [],
+        'storage': []
+      },
+      {
+        'name': 'PC for Streaming',
+        'image': 'images/pcstreaming.png',
+        'price': 4000.00, // Default price for streaming PC
         'variants': [],
         'storage': []
       },
@@ -67,14 +144,38 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
       {
         'name': 'Acer Aspire 3',
         'image': 'images/aceraspire.png',
-        'price': 1699.99,
+        'price': 2499.00, // Approx MYR Price
         'specifications': 'Intel i5, 8GB RAM, 512GB SSD'
       },
       {
         'name': 'Acer Nitro V15',
         'image': 'images/acernitrov15.png',
-        'price': 3899.99,
+        'price': 4499.00, // Approx MYR Price
         'specifications': 'Intel i7, 16GB RAM, 1TB SSD'
+      },
+      {
+        'name': 'MacBook Air M1',
+        'image': 'images/macbookairm1.png',
+        'price': 5299.00, // Approx MYR Price
+        'specifications': 'Apple M1 Chip, 8GB RAM, 256GB SSD'
+      },
+      {
+        'name': 'HP Spectre x360',
+        'image': 'images/hpspectrex360.png',
+        'price': 6999.00, // Approx MYR Price
+        'specifications': 'Intel i7, 16GB RAM, 512GB SSD'
+      },
+      {
+        'name': 'Lenovo ThinkPad X1',
+        'image': 'images/lenovothinkpadx1.png',
+        'price': 6999.00, // Approx MYR Price
+        'specifications': 'Intel i7, 16GB RAM, 1TB SSD'
+      },
+      {
+        'name': 'Dell XPS 13',
+        'image': 'images/dellxps13.png',
+        'price': 5999.00, // Approx MYR Price
+        'specifications': 'Intel i7, 16GB RAM, 512GB SSD'
       },
     ],
   };
@@ -112,6 +213,12 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
     super.dispose();
   }
 
+  String _formatCategoryName(String categoryType) {
+    return categoryType.replaceAll('_', ' ').split(' ').map((word) {
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }).join(' ');
+  }
+
   @override
   Widget build(BuildContext context) {
     final products = categoryProducts[widget.categoryType] ?? [];
@@ -140,7 +247,7 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              widget.categoryType.toUpperCase(),
+              _formatCategoryName(widget.categoryType),  // Using formatted category name
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -194,7 +301,7 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
                         ),
                         SizedBox(height: 7),
                         Text(
-                          '\RM ${product['price'].toStringAsFixed(2)}',
+                          'RM ${product['price'].toStringAsFixed(2)}', // Price in MYR
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,

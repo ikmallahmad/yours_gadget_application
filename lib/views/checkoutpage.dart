@@ -15,6 +15,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
   List<Map<String, dynamic>> _addresses = [];
   Map<String, dynamic>? _selectedAddress;
   String? _selectedPaymentMethod;
+  String? _errorMessage;
 
   @override
   void initState() {
@@ -45,6 +46,17 @@ class _CheckoutPageState extends State<CheckoutPage> {
 
   // Place the order and save cartItems to Firestore
   Future<void> _placeOrder() async {
+    setState(() {
+      _errorMessage = null; // Reset any previous error message
+    });
+
+    if (_selectedAddress == null || _selectedPaymentMethod == null) {
+      setState(() {
+        _errorMessage = 'Please select both a shipping address and a payment method.';
+      });
+      return;
+    }
+
     final User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       final uid = user.uid;
@@ -146,7 +158,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 children: [
                   Text("Total: ", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   Text(
-                    "\RM ${cartItems.fold(0.0, (sum, item) => sum + ((item['price'] as double) * (item['quantity'] ?? 1)))}",
+                    "\RM ${cartItems.fold(0.0, (sum, item) => sum + ((item['price'] as double) * (item['quantity'] ?? 1))).toStringAsFixed(2)}",
                     style: TextStyle(fontSize: 18),
                   ),
                 ],
@@ -214,6 +226,15 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 }).toList(),
               ),
               SizedBox(height: 30),
+              // Error message for missing address or payment method
+              if (_errorMessage != null)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Text(
+                    _errorMessage!,
+                    style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                  ),
+                ),
               // Place Order Button
               ElevatedButton(
                 onPressed: _placeOrder,
